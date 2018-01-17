@@ -141,6 +141,10 @@ class Quote(Base):
         """ Return the closing price. """
         return self._parse_response(attribute='close', **config)
 
+    def last(self, **config):
+        """ Return the last price. """
+        return self._parse_response(attribute='last', **config)
+
     def prevclose(self, **config):
         """ Return the previous closing price. """
         return self._parse_response(attribute='prevclose', **config)
